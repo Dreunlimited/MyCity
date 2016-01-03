@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        DataService.instance.loadedPost
+        DataService.instance.loadPosts()
        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onPostLoaded:", name: "postLoaded", object: nil)
        
     }
@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configCell(post)
             return cell
         }else {
-            var cell = PostCell()
+            let cell = PostCell()
             cell.configCell(post)
             return cell
         }

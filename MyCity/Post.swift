@@ -41,13 +41,13 @@ class Post: NSObject, NSCoding {
         self.init()
         self._imagePath = aDecoder.decodeObjectForKey("imagePath") as? String
         self._title = aDecoder.decodeObjectForKey("title") as? String
-        self._postDescription = aDecoder.decodeObjectForKey("description") as? String
+        self._postDescription = aDecoder.decodeObjectForKey("postDescription") as? String
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(self._imagePath, forKey: "imagePath")
         aCoder.encodeObject(self._title, forKey: "title")
-        aCoder.encodeObject(self._postDescription, forKey: "description")
+        aCoder.encodeObject(self._postDescription, forKey: "postDescription")
     }
     
 }

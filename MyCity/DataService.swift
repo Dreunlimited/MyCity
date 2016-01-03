@@ -18,14 +18,14 @@ class DataService {
         return _loadedPosts
     }
     
-    func savePost(){
+    func savePosts(){
         let postsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedPosts)
         NSUserDefaults.standardUserDefaults().setObject(postsData, forKey: KEY_POSTS)
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
-    func loadPost(){
-        if let postsData = NSUserDefaults.standardUserDefaults().objectForKey(KEY_POSTS) as? NSData{
+    func loadPosts(){
+        if let postsData = NSUserDefaults.standardUserDefaults().objectForKey(KEY_POSTS) as? NSData {
             
             if let postArray = NSKeyedUnarchiver.unarchiveObjectWithData(postsData) as? [Post]{
                 _loadedPosts = postArray
@@ -51,14 +51,14 @@ class DataService {
     
     func addPost(post: Post){
         _loadedPosts.append(post)
-        savePost()
-        loadPost()
+        savePosts()
+        loadPosts()
     }
     
     
     
-    func documentsPathForFileName(name:String)-> String{
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentationDirectory, .UserDomainMask, true)
+    func documentsPathForFileName(name:String)-> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let fullPath = paths[0] as NSString
         return fullPath.stringByAppendingPathComponent(name)
     }
