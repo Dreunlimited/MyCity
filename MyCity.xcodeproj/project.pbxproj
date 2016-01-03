@@ -13,6 +13,9 @@
 		A6703D4D1C38FBE8006F152C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6703D4C1C38FBE8006F152C /* Assets.xcassets */; };
 		A6703D501C38FBE8006F152C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6703D4E1C38FBE8006F152C /* LaunchScreen.storyboard */; };
 		A6703D591C38FD3C006F152C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6703D581C38FD3C006F152C /* Post.swift */; };
+		AF52C8AA1C390721009B694F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF52C8A91C390721009B694F /* PostCell.swift */; };
+		AF52C8AD1C390D6A009B694F /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF52C8AC1C390D6A009B694F /* AddPostVC.swift */; };
+		AF52C8B01C391BC5009B694F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF52C8AF1C391BC5009B694F /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A6703D4F1C38FBE8006F152C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6703D511C38FBE8006F152C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6703D581C38FD3C006F152C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AF52C8A91C390721009B694F /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		AF52C8AC1C390D6A009B694F /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		AF52C8AF1C391BC5009B694F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +62,12 @@
 		A6703D441C38FBE8006F152C /* MyCity */ = {
 			isa = PBXGroup;
 			children = (
+				AF52C8AE1C391BB0009B694F /* services */,
+				AF52C8AB1C390CDA009B694F /* Controller */,
+				AF52C8A81C3906F1009B694F /* View */,
 				A6703D571C38FD29006F152C /* Model */,
 				A6703D451C38FBE8006F152C /* AppDelegate.swift */,
-				A6703D471C38FBE8006F152C /* ViewController.swift */,
-				A6703D491C38FBE8006F152C /* Main.storyboard */,
 				A6703D4C1C38FBE8006F152C /* Assets.xcassets */,
-				A6703D4E1C38FBE8006F152C /* LaunchScreen.storyboard */,
 				A6703D511C38FBE8006F152C /* Info.plist */,
 			);
 			path = MyCity;
@@ -73,6 +79,33 @@
 				A6703D581C38FD3C006F152C /* Post.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		AF52C8A81C3906F1009B694F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF52C8A91C390721009B694F /* PostCell.swift */,
+				A6703D491C38FBE8006F152C /* Main.storyboard */,
+				A6703D4E1C38FBE8006F152C /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AF52C8AB1C390CDA009B694F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A6703D471C38FBE8006F152C /* ViewController.swift */,
+				AF52C8AC1C390D6A009B694F /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AF52C8AE1C391BB0009B694F /* services */ = {
+			isa = PBXGroup;
+			children = (
+				AF52C8AF1C391BC5009B694F /* DataService.swift */,
+			);
+			name = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +181,10 @@
 			files = (
 				A6703D591C38FD3C006F152C /* Post.swift in Sources */,
 				A6703D481C38FBE8006F152C /* ViewController.swift in Sources */,
+				AF52C8AD1C390D6A009B694F /* AddPostVC.swift in Sources */,
+				AF52C8B01C391BC5009B694F /* DataService.swift in Sources */,
 				A6703D461C38FBE8006F152C /* AppDelegate.swift in Sources */,
+				AF52C8AA1C390721009B694F /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +334,7 @@
 				A6703D561C38FBE8006F152C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
